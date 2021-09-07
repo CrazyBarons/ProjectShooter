@@ -1,0 +1,24 @@
+14:20 - 07/09
+
+Creating a github repository for the Project.
+
+14:50 - 07/09
+
+Done with the repo, now the research, to see how much time I'll try investing.
+I'd say 30/40 minutes are more than enough.
+
+15:40 - 07/09
+
+The research took a bit more time than expected, but I've now written a txt document explaining all the basic tasks of the various scripts and objects. Also, I've written down the parameters which will be modifiable by Designers.
+Now I'll take 10 minutes to draw some super simple assets to use as main menu, victory and game over screens.
+
+15:50 - 07/09
+
+I've made 3 assets for the menu with paint. Now I'll take a break and continue either tomorrow or afterwards.
+
+
+
+
+
+
+Total Hours Spent: 1.5

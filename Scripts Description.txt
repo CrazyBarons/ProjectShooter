@@ -1,0 +1,25 @@
+-MainMenu (GUI Element, it's a still image, containing the basic infos to play the game and the start button. It sends reset messages to all the other elements in the game, whenever a new game is started)(It covers up the whole screen, so that you don't have to see what's happening behind it)
+
+-Road (Nothing more than a block, on which the character and the enemies are collocated. It has guards to prevent the character from falling through)
+
+-Character (A still cube, giving the semblance of running, but really not moving forward. It has the task of shooting the enemies and moving sideways, to avoid incoming walls. Also the player will have an OnTriggerEnter function which triggers whenever it comes in contact with enemies, walls or the finish line)
+
+-Enemy (A basic class for all enemies, implementing classic stuff like hit points and other basic parameters)
+
+-Runner (The basic kind of Enemy. It runs forward, trying to catch up with the player, then when it gets close enough it starts homing in, trying to touch the player)
+
+-Road Signal (A basic post, telling the player how far he's gotten. This just spawns at the side of the road every x time units, to let you know how much you've been running and how much distance you're missing until the end of the road)
+
+-Walls (A block spawning on the road as you go on, if the player touches it, it breaks, while debuffing the player with a lower running speed. This really just makes it so that enemies catch up faster and road signals spawn less frequently. The slow effect lasts x seconds, as decided by the Game Designer)
+
+-Wall Manager (An object tasked with spawning the walls in established patterns, choosing patterns based on a randomly generated number)
+
+-Enemy Spawner (An object managing the spawn of new enemies on the track. The frequency of new enemies can be modified by the Game Designer. The enemies always get spawned at the end of the track, running at varying speed starting from a base value, adding or subtracting a small standard value, which is in range of a percentage of the base speed)
+
+-Finish Line (An object that spawns at the end of the road. If the player touches it and is still alive, then the game ends and you've won)
+
+-Pause Manager (The last manager, which controls the pause function in the game, and is tied to the same object as the main menu. This allows the game to be paused while running)
+
+-CountDown Manager (Just launches the countdown before the game starts)
+
+-Parameter Loader (A Manager containing the parameters written in by the Game Designer. This class loads parameters from a txt file, and normalizes them if needed, so that if an input error is made by a Designer, the game doesn't break up at least)
