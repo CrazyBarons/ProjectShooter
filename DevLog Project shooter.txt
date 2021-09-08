@@ -16,9 +16,27 @@ Now I'll take 10 minutes to draw some super simple assets to use as main menu, v
 
 I've made 3 assets for the menu with paint. Now I'll take a break and continue either tomorrow or afterwards.
 
+------------------------------------------------------------------------------------------------------------------------------------
+
+10:30 - 08/09
+
+Today I'll start by making a class diagram, to visualize the program in a better way.
+
+11:00 - 08/09
+
+The diagram is done, now I can estimate the time it will take me to implement the project.
+
+11:10 - 08/09
+
+I think it'll take me 10/12 hours to have the project as i envisioned it.
+
+12:40 - 08/09
+
+I started by proramming the main menu and the timing for the start of the game, as well as a rudimental pause function, all with functioning UI elements. Also, i implemented the class containing the value which can be tweaked (it's just missing protections). The frame for the game to take place is basically set, after lunch I'll work on the "real" game objects.
 
 
 
 
 
-Total Hours Spent: 1.5
+
+

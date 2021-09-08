@@ -1,3 +1,5 @@
+These parameters are modifiable in a file contained within the assets folder. Here is a basic explanation of what they do and how much you are allowed to tweak them.
+
 -EnemyFrequency is a float number, determining how much time passes between the spawn of the enemies. This time then is modified by a margin of 10% to add a bit of variance to timing.
 
 -WallsFrequency is a float number, determining how much time passes between the spawn of new wall patterns. As with enemies, the time is increased or decreased by a value within 10% of the original number, so that new obstacles are a bit less predictable.
