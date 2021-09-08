@@ -56,10 +56,13 @@
     <Analyzer Include="D:\Visual Studio Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\script_MainMenu.cs" />
-    <Compile Include="Assets\script_PauseManager.cs" />
-    <Compile Include="Assets\script_ParameterLoader.cs" />
-    <Compile Include="Assets\script_CountDownManager.cs" />
+    <Compile Include="Assets\Scripts\script_MainMenu.cs" />
+    <Compile Include="Assets\Scripts\script_CountDownManager.cs" />
+    <Compile Include="Assets\Scripts\script_PauseManager.cs" />
+    <Compile Include="Assets\Scripts\script_ParameterLoader.cs" />
+    <Compile Include="Assets\Scripts\script_Player.cs" />
+    <Compile Include="Assets\Scripts\script_HitBox.cs" />
+    <Compile Include="Assets\Scripts\script_Bullet.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

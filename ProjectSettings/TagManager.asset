@@ -7,6 +7,8 @@ TagManager:
   - MainMenu
   - ParameterLoader
   - Canvas
+  - Weapon
+  - Enemy
   layers:
   - Default
   - TransparentFX
