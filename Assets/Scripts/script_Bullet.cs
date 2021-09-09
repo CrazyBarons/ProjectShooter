@@ -24,4 +24,9 @@ public class script_Bullet : script_HitBox
         Destroy(gameObject);
         return;
     }
+
+    void GameStart()
+    {
+        Destroy(gameObject);
+    }
 }

@@ -69,6 +69,7 @@ public class script_WallSpawn : MonoBehaviour
 
     void GameStart()
     {
+        StopAllCoroutines();
         canSpawn = false;
         isWaiting = false;
         return;

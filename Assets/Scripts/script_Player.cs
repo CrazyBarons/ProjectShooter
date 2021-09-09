@@ -23,7 +23,7 @@ public class script_Player : MonoBehaviour
     {
         RB = GetComponent<Rigidbody>();
         horizontalSpeed = script_ParameterLoader.get_horizontalSpeed();
-        verticalSpeed = script_ParameterLoader.get_playerSpeed();
+        verticalSpeed = script_ParameterLoader.get_runningSpeed();
         reloadTime = script_ParameterLoader.get_reloadTime();
 
     }
@@ -71,15 +71,6 @@ public class script_Player : MonoBehaviour
         return;
     }
 
-    void GameStart()
-    {
-        isReloading = false;
-        canShoot = false;
-        isSlowed = false;
-        transform.position = NormalPos;
-        return;
-    }
-
     IEnumerator Reload()
     {
         yield return new WaitForSeconds(reloadTime);
@@ -98,5 +89,15 @@ public class script_Player : MonoBehaviour
     public bool get_isSlowed()
     {
         return isSlowed;
+    }
+
+    void GameStart()
+    {
+        StopAllCoroutines();
+        isReloading = false;
+        canShoot = false;
+        isSlowed = false;
+        transform.position = NormalPos;
+        return;
     }
 }

@@ -78,10 +78,23 @@ Finished the Wall Spawner. It has 3 different patterns depending on rng and it s
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
+22:00 - 09/09
+
+From now until midnight I'll be working and trying to complete the base game, then I'll see how and if to continue adding stuff tomorrow. I'd like to implement at least two 3d models and then I'll do some polishing before submitting the project.
+
+24:00 - 09/09
+
+The basic functions of the game are all there! Now I'll need to fix just a little problem (pause can be activated during countdown) and then I'll be done. As a quality of life change, I'll add a counter to keep track of kills too, but that should be it. Then tomorrow I'll try adding the two animations I wrote of earlier, and then I'll write the last small pieces of documentation before submitting the project.
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 Research ETA: 30/40 minutes
 Research Time: 1 hour 30 minutes
 
 Implementation ETA: 10/12 hours
-Implementation Time: 7 hours 0 minutes
+Implementation Time: 9 hours 0 minutes
 
 Hours spent on the project: 9 hours 10 minutes

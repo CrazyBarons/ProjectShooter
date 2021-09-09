@@ -14,12 +14,14 @@ public class script_Enemy : MonoBehaviour
     public Transform P;
     public script_Player PS;
     public script_MainMenu MM;
+    public script_KillCounter KC;
 
     private void Awake()
     {
-        MM = GameObject.FindGameObjectWithTag("MainMenu").GetComponent<script_MainMenu>();
-        P = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        PS = GameObject.FindGameObjectWithTag("Player").GetComponent<script_Player>();
+        MM = GameObject.Find("MainMenu").GetComponent<script_MainMenu>();
+        P = GameObject.Find("Player").GetComponent<Transform>();
+        PS = GameObject.Find("Player").GetComponent<script_Player>();
+        KC = GameObject.Find("KillCounter").GetComponent<script_KillCounter>();
     }
 
     private void OnTriggerEnter(Collider collider)
@@ -33,6 +35,11 @@ public class script_Enemy : MonoBehaviour
     public virtual void PlayerHit(GameObject Player)
     {
         return;
+    }
+
+    private void OnDestroy()
+    {
+        KC.KilledOne();
     }
 
     void GameStart()

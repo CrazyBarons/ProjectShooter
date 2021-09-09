@@ -58,7 +58,9 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\script_Player.cs" />
     <Compile Include="Assets\Scripts\script_HitBox.cs" />
+    <Compile Include="Assets\Scripts\script_WallSpawn.cs" />
     <Compile Include="Assets\Scripts\script_Bullet.cs" />
+    <Compile Include="Assets\Scripts\script_Wall.cs" />
     <Compile Include="Assets\Scripts\script_Interactable.cs" />
     <Compile Include="Assets\Scripts\script_DestroyerNet.cs" />
     <Compile Include="Assets\Scripts\script_Runner.cs" />
@@ -68,8 +70,11 @@
     <Compile Include="Assets\Scripts\script_Enemy.cs" />
     <Compile Include="Assets\Scripts\script_PauseManager.cs" />
     <Compile Include="Assets\Scripts\script_ParameterLoader.cs" />
-    <Compile Include="Assets\Scripts\script_Wall.cs" />
-    <Compile Include="Assets\Scripts\script_WallSpawn.cs" />
+    <Compile Include="Assets\Scripts\script_EnemySpawn.cs" />
+    <Compile Include="Assets\Scripts\script_WaypointSpawner.cs" />
+    <Compile Include="Assets\Scripts\script_Signal.cs" />
+    <Compile Include="Assets\Scripts\script_FinishLine.cs" />
+    <Compile Include="Assets\Scripts\script_KillCounter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
