@@ -7,21 +7,25 @@ public class script_Player : MonoBehaviour
 
     public GameObject Bullet;
     Rigidbody RB;
-    Vector3 NormalPos = new Vector3(2400f,130f,1430f);
+    Vector3 NormalPos = new Vector3(2400f,119f,1430f);
 
     float horizontalSpeed;
+    float verticalSpeed;
     float reloadTime;
     float gravity = 300f;
 
     bool canShoot = false;
     bool isReloading = false;
+    bool isSlowed = false;
 
     // Start is called before the first frame update
     void Start()
     {
         RB = GetComponent<Rigidbody>();
         horizontalSpeed = script_ParameterLoader.get_horizontalSpeed();
+        verticalSpeed = script_ParameterLoader.get_playerSpeed();
         reloadTime = script_ParameterLoader.get_reloadTime();
+
     }
 
     // Update is called once per frame
@@ -44,31 +48,55 @@ public class script_Player : MonoBehaviour
         RB.AddForce(0f, -gravity, 0f);
 
         //Code to shoot projectiles
-        if (!canShoot && !isReloading)
+        if (!isReloading)
         {
-            StartCoroutine(Reload());
+            if (!canShoot)
+            {
+                isReloading = true;
+                StartCoroutine(Reload());
+            }
+            else
+            {
+                canShoot = false;
+                Instantiate(Bullet, transform.position, Quaternion.identity);
+            }
         }
-        
-        if(canShoot)
-        {
-            canShoot = false;
-            Instantiate(Bullet, transform.position, Quaternion.identity);
-        }
+    }
+
+    public void Slow()
+    {
+        isSlowed = true;
+        StopCoroutine(SlowCooldown());
+        StartCoroutine(SlowCooldown());
+        return;
     }
 
     void GameStart()
     {
+        isReloading = false;
+        canShoot = false;
+        isSlowed = false;
         transform.position = NormalPos;
         return;
     }
 
     IEnumerator Reload()
     {
-        isReloading = true;
         yield return new WaitForSeconds(reloadTime);
         canShoot = true;
         isReloading = false;
         StopCoroutine(Reload());
     }
 
+    IEnumerator SlowCooldown()
+    {
+        yield return new WaitForSeconds(3.0f);
+        isSlowed = false;
+        StopCoroutine(Reload());
+    }
+
+    public bool get_isSlowed()
+    {
+        return isSlowed;
+    }
 }

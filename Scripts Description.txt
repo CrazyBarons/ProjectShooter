@@ -4,15 +4,15 @@ V -Player (A still character, giving the semblance of running, but really not mo
 
 V -Enemy (A basic class for all enemies, implementing classic stuff like hit points and other basic parameters, as well as the function to call for the end of the game whenever it touches the player)
 
--Runner (The basic kind of Enemy. It runs forward, trying to catch up with the player, then when it gets close enough it starts homing in, trying to touch the player)
+V -Runner (The basic kind of Enemy. It runs forward, trying to catch up with the player, then when it gets close enough it starts homing in, trying to touch the player)
 
 -Signal (A basic road signal, telling the player how far he's gotten. This just spawns at the side of the road every x time units, to let you know how much you've been running and how much distance you're missing until the end of the road)
 
 V -Interactable (A father for all classes which will have to interact with the player on hit. Children of this class will implement a call whenever the collider attached to the class touches the player. A child of this class is, for example, the wall object)
 
--Wall (A block spawning on the road as you go on, if the player touches it, it breaks, while debuffing the player with a lower running speed. This really just makes it so that enemies catch up faster and road signals spawn less frequently. The slow effect lasts x seconds, as decided by the Game Designer)
+V -Wall (A block spawning on the road as you go on, if the player touches it, it breaks, while debuffing the player with a lower running speed. This really just makes it so that enemies catch up faster and road signals spawn less frequently. The slow effect lasts x seconds, as decided by the Game Designer)
 
--Wall Spawn (An object tasked with spawning the walls in established patterns, choosing patterns based on a randomly generated number)
+V -Wall Spawn (An object tasked with spawning the walls in established patterns, choosing patterns based on a randomly generated number)
 
 -Enemy Spawn (An object managing the spawn of new enemies on the track. The frequency of new enemies can be modified by the Game Designer. The enemies always get spawned at the end of the track, running at varying speed starting from a base value, adding or subtracting a small standard value, which is in range of a percentage of the base speed)
 
@@ -28,8 +28,8 @@ V -Parameter Loader (A Manager containing the parameters written in by the Game 
 
 V -EnemyCollision (A small script, telling the enemies' not to push around both the player and the walls)
 
--InteractableCollision(Same as the enemy one. It prevents phisical collisions between the interactables and the player/enemies)
-
 V -Bullet (A script which commands the bullets to fly straight and to call a base function when coming in contact with enemies)
 
 V -Hitbox (A simple script, which tells all weapons used by the player to do something to the enemy whenever one is hit by them)
+
+V -DestroyerNet (A script to make so that bullets and walls are destroyed when they get out of the camera)

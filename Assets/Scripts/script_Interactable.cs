@@ -10,11 +10,13 @@ public class script_Interactable : MonoBehaviour
     //(By the way, this class and the enemy class are basically the same now, but since the project has to be done with the perspective of a future
     //expansion, so I think it's better to keep them separated, since there are a lot of possibilities to differentiate them)
 
+    public script_Player PS;
     public script_MainMenu MM;
 
     private void Awake()
     {
         MM = GameObject.FindGameObjectWithTag("MainMenu").GetComponent<script_MainMenu>();
+        PS = GameObject.FindGameObjectWithTag("Player").GetComponent<script_Player>();
     }
 
     private void OnTriggerEnter(Collider collider)
@@ -27,6 +29,12 @@ public class script_Interactable : MonoBehaviour
 
     public virtual void PlayerHit(GameObject Player)
     {
+        return;
+    }
+
+    void GameStart()
+    {
+        Destroy(gameObject);
         return;
     }
 }

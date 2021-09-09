@@ -59,15 +59,17 @@
     <Compile Include="Assets\Scripts\script_Player.cs" />
     <Compile Include="Assets\Scripts\script_HitBox.cs" />
     <Compile Include="Assets\Scripts\script_Bullet.cs" />
+    <Compile Include="Assets\Scripts\script_Interactable.cs" />
+    <Compile Include="Assets\Scripts\script_DestroyerNet.cs" />
+    <Compile Include="Assets\Scripts\script_Runner.cs" />
     <Compile Include="Assets\Scripts\script_MainMenu.cs" />
+    <Compile Include="Assets\Scripts\script_EnemyCollision.cs" />
     <Compile Include="Assets\Scripts\script_CountDownManager.cs" />
+    <Compile Include="Assets\Scripts\script_Enemy.cs" />
     <Compile Include="Assets\Scripts\script_PauseManager.cs" />
     <Compile Include="Assets\Scripts\script_ParameterLoader.cs" />
-    <Compile Include="Assets\Scripts\script_DestroyerNet.cs" />
-    <Compile Include="Assets\Scripts\script_Enemy.cs" />
-    <Compile Include="Assets\Scripts\script_Interactable.cs" />
-    <Compile Include="Assets\Scripts\script_Runner.cs" />
-    <Compile Include="Assets\Scripts\script_EnemyCollisionFix.cs" />
+    <Compile Include="Assets\Scripts\script_Wall.cs" />
+    <Compile Include="Assets\Scripts\script_WallSpawn.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

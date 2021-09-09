@@ -2,7 +2,7 @@ These parameters are modifiable in a file contained within the assets folder. He
 
 -EnemyFrequency is a float number, determining how much time passes between the spawn of the enemies. This time then is modified by a margin of 10% to add a bit of variance to timing.
 
--WallsFrequency is a float number, determining how much time passes between the spawn of new wall patterns. As with enemies, the time is increased or decreased by a value within 10% of the original number, so that new obstacles are a bit less predictable.
+-WallsFrequency is a float number, determining how much time passes between the spawn of new walls. As with enemies, the time is increased or decreased by a value within 10% of the original number, so that new obstacles are a bit less predictable.
 
 -ProjectileSpeed is a float number, determining the speed of the projectiles shot by the player.
 
@@ -15,3 +15,5 @@ These parameters are modifiable in a file contained within the assets folder. He
 -ReloadTime is a float number, determining how many seconds have to pass after a shot is fired before firing the next one.
 
 -TrackLength is an integer number, determining how many signals the player has to pass before the end of the road is reached.
+
+-Player Speed is a float number, determining how fast the character runs, and how fast the camera has to follow him.

@@ -59,3 +59,29 @@ I'll program for just an hour this morning. The objective is to put in the game 
 I've managed to do what I intended to, also I already implemented the Interactable class and the base for the runner enemy. Last but not least, I also managed to make the EnemyCollision class, which makes so that the enemies don't touch each other and/or interactable objects.
 
 ------------------------------------------------------------------------------------------------------------------------------------
+
+16:30 - 09/09
+
+The objective for today is to finish the runner enemy and the walls, so that the project has all of the base parts. After these are done, I'll start putting down the work for the wall spawner and the enemy spawner.
+
+17:10 - 09/09
+
+Running Enemies now follow the player until close, then start homing in for the kill.
+
+18:20 - 09/09
+
+Finished with enemies and walls. They do what they need to without problems. Now the spawners and then the game'll be close to being done.
+
+19:00 - 09/09
+
+Finished the Wall Spawner. It has 3 different patterns depending on rng and it spawns at a regular rate with the possible small variance on the delay. I'll continue programming later during the evening, since I'd like to be done tomorrow.
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+Research ETA: 30/40 minutes
+Research Time: 1 hour 30 minutes
+
+Implementation ETA: 10/12 hours
+Implementation Time: 7 hours 0 minutes
+
+Hours spent on the project: 9 hours 10 minutes
