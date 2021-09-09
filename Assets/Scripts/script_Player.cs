@@ -6,7 +6,6 @@ public class script_Player : MonoBehaviour
 {
 
     public GameObject Bullet;
-    script_ParameterLoader PL;
     Rigidbody RB;
     Vector3 NormalPos = new Vector3(2400f,130f,1430f);
 
@@ -20,18 +19,9 @@ public class script_Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PL = GameObject.FindGameObjectWithTag("ParameterLoader").GetComponent<script_ParameterLoader>();
         RB = GetComponent<Rigidbody>();
-        if(PL != null)
-        {
-            horizontalSpeed = PL.get_horizontalSpeed();
-            reloadTime = PL.get_reloadTime();
-        }
-        else
-        {
-            horizontalSpeed = 300f;
-            reloadTime =1.5f;
-        }
+        horizontalSpeed = script_ParameterLoader.get_horizontalSpeed();
+        reloadTime = script_ParameterLoader.get_reloadTime();
     }
 
     // Update is called once per frame

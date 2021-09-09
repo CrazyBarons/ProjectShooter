@@ -5,7 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - MainMenu
-  - ParameterLoader
   - Canvas
   - Weapon
   - Enemy
@@ -16,9 +15,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Player
+  - Enemy
+  - Interactable
   - 
   - 
   - 

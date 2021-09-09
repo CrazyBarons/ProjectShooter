@@ -2,54 +2,54 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class script_ParameterLoader : MonoBehaviour
+public static class script_ParameterLoader
 {
 
-    readonly float EnemyFrequency = 2f;
-    readonly float WallsFrequency = 2f;
-    readonly float ProjectileSpeed = 450f;
-    readonly float EnemySpeed = 2f;
-    readonly float RunningSpeed = 2f;
-    readonly float HorizontalSpeed = 300f;
-    readonly float ReloadTime = 1.5f;
-    readonly int Tracklength = 2;
+    readonly static float EnemyFrequency = 2f;
+    readonly static float WallsFrequency = 2f;
+    readonly static float ProjectileSpeed = 1850f;
+    readonly static float EnemySpeed = 2f;
+    readonly static float RunningSpeed = 2f;
+    readonly static float HorizontalSpeed = 300f;
+    readonly static float ReloadTime = 1.5f;
+    readonly static int Tracklength = 2;
 
-    public float get_enemyFrequency()
+    public static float get_enemyFrequency()
     {
         return EnemyFrequency;
     }
 
-    public float get_wallsFrequency()
+    public static float get_wallsFrequency()
     {
         return WallsFrequency;
     }
 
-    public float get_projectileSpeed()
+    public static float get_projectileSpeed()
     {
         return ProjectileSpeed;
     }
 
-    public float get_enemySpeed()
+    public static float get_enemySpeed()
     {
         return EnemySpeed;
     }
 
-    public float get_runningSpeed()
+    public static float get_runningSpeed()
     {
         return RunningSpeed;
     }
 
-    public float get_horizontalSpeed()
+    public static float get_horizontalSpeed()
     {
         return HorizontalSpeed;
     }
 
-    public float get_reloadTime()
+    public static float get_reloadTime()
     {
         return ReloadTime;
     }
 
-    public float get_tracklength()
+    public static float get_tracklength()
     {
         return Tracklength;
     }

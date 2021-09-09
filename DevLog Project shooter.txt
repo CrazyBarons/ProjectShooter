@@ -49,3 +49,13 @@ The main character and the bridge are in position. Now I'll try adding the shoot
 The player now shoots projectile and the basis to kill enemies and make new weapons should be in place. I've realised that I should add a net to destroy bullets which don't kill enemies and the walls the player passes through, but I think I'm done for today.
 
 ------------------------------------------------------------------------------------------------------------------------------------
+
+11:40 - 09/09
+
+I'll program for just an hour this morning. The objective is to put in the game a net to destroy eventual object which get out of the main camera (walls and projectiles), and to create a basic class for the enemy, which will have to interact with the player on touch.
+
+12:40 - 09/09
+
+I've managed to do what I intended to, also I already implemented the Interactable class and the base for the runner enemy. Last but not least, I also managed to make the EnemyCollision class, which makes so that the enemies don't touch each other and/or interactable objects.
+
+------------------------------------------------------------------------------------------------------------------------------------

@@ -43,7 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a2897e056247c44d9a14a98bd247941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myImage: {fileID: 0}
   MainMenu: {fileID: 21300000, guid: aa312f820f8a29244add194be5248988, type: 3}
   GameOver: {fileID: 21300000, guid: 3883b650c5370914b834fcb554f07e7b, type: 3}
   YouWin: {fileID: 21300000, guid: 356e4b88881d1224abb648783b8ac9ed, type: 3}

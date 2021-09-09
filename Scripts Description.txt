@@ -2,13 +2,13 @@ V -MainMenu (GUI Element, it's a still image, containing the basic infos to play
 
 V -Player (A still character, giving the semblance of running, but really not moving forward. It has the task of shooting backwards and moving sideways, to avoid incoming walls. Also the player will trigger functions whenever it comes in contact with enemies, walls or the finish line.)
 
--Enemy (A basic class for all enemies, implementing classic stuff like hit points and other basic parameters, as well as the function to call for the end of the game whenever it touches the player)
+V -Enemy (A basic class for all enemies, implementing classic stuff like hit points and other basic parameters, as well as the function to call for the end of the game whenever it touches the player)
 
 -Runner (The basic kind of Enemy. It runs forward, trying to catch up with the player, then when it gets close enough it starts homing in, trying to touch the player)
 
 -Signal (A basic road signal, telling the player how far he's gotten. This just spawns at the side of the road every x time units, to let you know how much you've been running and how much distance you're missing until the end of the road)
 
--Interactable (A father for all classes which will have to interact with the player on hit. Children of this class will implement a call whenever the collider attached to the class touches the player. A child of this class is, for example, the wall object)
+V -Interactable (A father for all classes which will have to interact with the player on hit. Children of this class will implement a call whenever the collider attached to the class touches the player. A child of this class is, for example, the wall object)
 
 -Wall (A block spawning on the road as you go on, if the player touches it, it breaks, while debuffing the player with a lower running speed. This really just makes it so that enemies catch up faster and road signals spawn less frequently. The slow effect lasts x seconds, as decided by the Game Designer)
 
@@ -26,10 +26,10 @@ V -CountDown Manager (Just launches the countdown before the game starts)
 
 V -Parameter Loader (A Manager containing the parameters written in by the Game Designer. This class loads parameters from a txt file, and normalizes them if needed, so that if an input error is made by a Designer, the game doesn't break up at least)
 
--EnemyCollision (A small script, telling the enemies' not to push around both the player and the walls)
+V -EnemyCollision (A small script, telling the enemies' not to push around both the player and the walls)
 
 -InteractableCollision(Same as the enemy one. It prevents phisical collisions between the interactables and the player/enemies)
 
--Bullet (A script which commands the bullets to fly straight and to call a base function when coming in contact with enemies)
+V -Bullet (A script which commands the bullets to fly straight and to call a base function when coming in contact with enemies)
 
--Hitbox (A simple script, which tells all weapons used by the player to do something to the enemy whenever one is hit by them)
+V -Hitbox (A simple script, which tells all weapons used by the player to do something to the enemy whenever one is hit by them)

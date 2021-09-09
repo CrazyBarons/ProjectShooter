@@ -5,21 +5,11 @@ using UnityEngine;
 public class script_Bullet : script_HitBox
 {
 
-    script_ParameterLoader PL;
-
     float speed;
 
     void Start()
     {
-        PL = GameObject.FindGameObjectWithTag("ParameterLoader").GetComponent<script_ParameterLoader>();
-        if (PL != null)
-        {
-            speed = PL.get_projectileSpeed();
-        }
-        else
-        {
-            speed = 450f;
-        }
+        speed = script_ParameterLoader.get_projectileSpeed();
     }
 
     // Update is called once per frame
