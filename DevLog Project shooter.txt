@@ -114,4 +114,4 @@ Research Time: 1 hour 30 minutes
 Implementation ETA: 10/12 hours
 Implementation Time: 11 hours 10 minutes
 
-Hours spent on the project: 13 hours 10 minutes
+Hours spent on the project: 15 hours 10 minutes
