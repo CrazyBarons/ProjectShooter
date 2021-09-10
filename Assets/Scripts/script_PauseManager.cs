@@ -7,6 +7,7 @@ public class script_PauseManager : MonoBehaviour
 {
 
     script_MainMenu MM;
+    script_CountDownManager CDM;
     public Text PauseText;
 
     bool gamePaused = false;
@@ -15,12 +16,13 @@ public class script_PauseManager : MonoBehaviour
 
     void Start()
     {
-        MM = GameObject.FindGameObjectWithTag("MainMenu").GetComponent<script_MainMenu>();
+        MM = GameObject.Find("MainMenu").GetComponent<script_MainMenu>();
+        CDM = GameObject.Find("CountDownManager").GetComponent<script_CountDownManager>();
     }
 
     void Update()
     {
-        if (MM.get_gameRunning() && Input.GetKeyDown(KeyCode.Return) && gameReady)
+        if (MM.get_gameRunning() && Input.GetKeyDown(KeyCode.Return) && !CDM.get_counting() && gameReady)
         {
             gameReady = false;
             StartCoroutine(PauseGame());

@@ -3,31 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class script_Signal : MonoBehaviour
+public class script_Signal : script_RelativeSpeed
 {
 
-    Rigidbody RB;
     script_WaypointSpawner WS;
     public Text Number;
 
-    float speed;
-    
     // Start is called before the first frame update
-    void Start()
+    public override void Start()
     {
         RB = GetComponent<Rigidbody>();
         WS = GameObject.Find("WaypointSpawner").GetComponent<script_WaypointSpawner>();
+        PS = GameObject.Find("Player").GetComponent<script_Player>();
         Number.text = WS.get_currentSignal().ToString();
-        speed = script_ParameterLoader.get_runningSpeed();
+        baseSpeed = script_ParameterLoader.get_runningSpeed();
+        slowPercentage = script_ParameterLoader.get_slowPercent();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        RB.velocity = new Vector3(speed * 10f, 0f, 0f);
-    }
-
-    void StartGame()
+    void GameStart()
     {
         Destroy(gameObject);
         return;

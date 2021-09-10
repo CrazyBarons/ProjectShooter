@@ -7,13 +7,11 @@ public class script_CountDownManager : MonoBehaviour
 {
     public Text Count;
 
-    void GameStart()
-    {
-        StartCoroutine(StartCountdown());
-    }
+    bool counting = false;
 
     IEnumerator StartCountdown()
     {
+        counting = true;
         Count.enabled = true;
         Count.text = "3";
         yield return new WaitForSecondsRealtime(1f);
@@ -25,6 +23,17 @@ public class script_CountDownManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(1f);
         Count.enabled = false;
         Time.timeScale = 1.0f;
+        counting = false;
         StopCoroutine(StartCountdown());
+    }
+
+    public bool get_counting()
+    {
+        return counting;
+    }
+
+    void GameStart()
+    {
+        StartCoroutine(StartCountdown());
     }
 }

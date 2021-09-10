@@ -11,11 +11,12 @@ public static class script_ParameterLoader
     readonly static float EnemySpeed = 300f;
     readonly static float RunningSpeed = 200f;
     readonly static float HorizontalSpeed = 500f;
-    readonly static float ReloadTime = 1.5f;
+    readonly static float ReloadTime = 1.0f;
     readonly static float SlowPercent = 0.5f;
-    readonly static int TrackLength = 2;
+    readonly static int TrackLength = 5;
     readonly static int EnemyTotal = 15;
-    readonly static int StartingEnemy = 2;
+    readonly static int StartingEnemy = 5;
+    readonly static int EnemyVolley = 1;
 
     public static float get_enemyFrequency()
     {
@@ -70,5 +71,10 @@ public static class script_ParameterLoader
     public static int get_startingEnemy()
     {
         return StartingEnemy;
+    }
+
+    public static int get_enemyVolley()
+    {
+        return EnemyVolley;
     }
 }

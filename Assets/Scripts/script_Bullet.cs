@@ -5,21 +5,35 @@ using UnityEngine;
 public class script_Bullet : script_HitBox
 {
 
-    float speed;
+    float projectileSpeed;
 
-    void Start()
+    public override void Start()
     {
-        speed = script_ParameterLoader.get_projectileSpeed();
+        RB = GetComponent<Rigidbody>();
+        PS = GameObject.Find("Player").GetComponent<script_Player>();
+        baseSpeed = script_ParameterLoader.get_runningSpeed();
+        slowPercentage = script_ParameterLoader.get_slowPercent();
+        projectileSpeed = script_ParameterLoader.get_projectileSpeed();
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    public override void Update()
     {
-        gameObject.GetComponent<Rigidbody>().velocity = new Vector3(speed, 0f, 0f);
+        RB.velocity = new Vector3(realSpeed, 0f, 0f);
+        slow = PS.get_isSlowed();
+
+        if (slow)
+        {
+            realSpeed = projectileSpeed - baseSpeed * slowPercentage;
+        }
+        else
+        {
+            realSpeed = projectileSpeed;
+        }
     }
 
     public override void EnemyHit(GameObject Enemy)
     {
+        KC.KilledOne();
         Destroy(Enemy);
         Destroy(gameObject);
         return;

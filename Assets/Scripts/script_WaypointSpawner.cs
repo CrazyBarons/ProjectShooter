@@ -22,7 +22,6 @@ public class script_WaypointSpawner : MonoBehaviour
         currentSignal = trackLength;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!isWaiting)

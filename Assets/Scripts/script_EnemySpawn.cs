@@ -14,15 +14,16 @@ public class script_EnemySpawn : MonoBehaviour
 
     bool canSpawn = false;
     bool isWaiting = false;
-    bool firstBurst = true;
 
     int startingEnemy;
+    int enemyPerSpawn;
 
     // Start is called before the first frame update
     void Start()
     {
         baseFrequency = script_ParameterLoader.get_enemyFrequency();
         startingEnemy = script_ParameterLoader.get_startingEnemy();
+        enemyPerSpawn = script_ParameterLoader.get_enemyVolley();
     }
 
     // Update is called once per frame
@@ -41,35 +42,22 @@ public class script_EnemySpawn : MonoBehaviour
             if (canSpawn)
             {
                 canSpawn = false;
-                SpawnRunner();
+                SpawnBurst(enemyPerSpawn);
             }
-        }
-
-        // The game starts with a number of enemies already on the board (to differentiate the starting point, some of them are already on the board
-        if (firstBurst)
-        {
-            firstBurst = false;
-            SpawnBurst(startingEnemy);
         }
 
     }
 
+    //This function spawns a given quantity of enemies scattered in a small area outside of the camera scope and behind the player
     void SpawnBurst(int quantity)
     {
         while (quantity > 0)
         {
             burstRandom = Random.Range(0.0f, 1.0f);
             placeRandom = Random.Range(0.0f, 1.0f);
-            Instantiate(Runner, new Vector3(5200f + (burstRandom * 800f), 119f, 1050f + (placeRandom * 800f)), Quaternion.identity);
+            Instantiate(Runner, new Vector3(5200f + (burstRandom * 800f), 213f, 1050f + (placeRandom * 800f)), Quaternion.Euler(0f, -90f, 0f));
             quantity = quantity - 1;
         }
-        return;
-    }
-
-    void SpawnRunner()
-    {
-        placeRandom = Random.Range(0.0f, 1.0f);
-        Instantiate(Runner, new Vector3(5800f, 119f, 1050f + (placeRandom * 800f)), Quaternion.identity);
         return;
     }
 
@@ -87,7 +75,7 @@ public class script_EnemySpawn : MonoBehaviour
         StopAllCoroutines();
         canSpawn = false;
         isWaiting = false;
-        firstBurst = true;
+        SpawnBurst(startingEnemy);
         return;
     }
 }

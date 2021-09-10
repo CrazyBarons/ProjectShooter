@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class script_Player : MonoBehaviour
 {
-
+    public script_MainMenu MM;
     public GameObject Bullet;
     Rigidbody RB;
-    Vector3 NormalPos = new Vector3(2400f,119f,1430f);
+    Vector3 NormalPos = new Vector3(2400f,213f,1430f);
 
     float horizontalSpeed;
-    float verticalSpeed;
     float reloadTime;
     float gravity = 300f;
 
@@ -18,17 +17,15 @@ public class script_Player : MonoBehaviour
     bool isReloading = false;
     bool isSlowed = false;
 
-    // Start is called before the first frame update
     void Start()
     {
+        MM = GameObject.Find("MainMenu").GetComponent<script_MainMenu>();
         RB = GetComponent<Rigidbody>();
         horizontalSpeed = script_ParameterLoader.get_horizontalSpeed();
-        verticalSpeed = script_ParameterLoader.get_runningSpeed();
         reloadTime = script_ParameterLoader.get_reloadTime();
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         //Code That Moves the Player
@@ -45,7 +42,9 @@ public class script_Player : MonoBehaviour
             RB.velocity = new Vector3(0f, RB.velocity.y, 0f);
         }
 
-        RB.AddForce(0f, -gravity, 0f);
+        if (MM.get_gameRunning()) {
+            RB.AddForce(0f, -gravity, 0f);
+        }
 
         //Code to shoot projectiles
         if (!isReloading)
@@ -61,6 +60,14 @@ public class script_Player : MonoBehaviour
                 Instantiate(Bullet, transform.position, Quaternion.identity);
             }
         }
+
+        //This part of code checks if the player fell down the edges of the bridge
+        if (Mathf.Abs(RB.velocity.y) >= 600f && MM.get_gameRunning())
+        {
+            MM.Lose();
+            RB.velocity = new Vector3(0f, 0f, 0f);
+        }
+
     }
 
     public void Slow()

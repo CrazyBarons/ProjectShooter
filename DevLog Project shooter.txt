@@ -88,13 +88,30 @@ The basic functions of the game are all there! Now I'll need to fix just a littl
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
+11:00 - 10/09
 
+Today I'll start by polishing the game a bit and making sure I haven't overlooked anything. After that, I'll see what to do.
 
+11:50 - 10/09
+
+The game plays smoothly and all of the functions I wanted to add are in. Last step is going to be adding the animations.
+
+13:00 - 10/09
+
+The base animations are in the game. Today I'll clean the project a bit before submitting it.
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+15:00 - Cleaning the project.
+
+17:00 - Finished cleaning and added a bit of documentation. I'm ready to submit this.
+
+------------------------------------------------------------------------------------------------------------------------------------
 
 Research ETA: 30/40 minutes
 Research Time: 1 hour 30 minutes
 
 Implementation ETA: 10/12 hours
-Implementation Time: 9 hours 0 minutes
+Implementation Time: 11 hours 10 minutes
 
-Hours spent on the project: 9 hours 10 minutes
+Hours spent on the project: 13 hours 10 minutes

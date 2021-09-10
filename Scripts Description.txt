@@ -1,39 +1,39 @@
-V -MainMenu (GUI Element, it's a still image, containing the basic infos to play the game and the start button. It sends reset messages to all the other elements in the game, whenever a new game is started)(It covers up the whole screen, so that you don't have to see what's happening behind it)
+-Bullet (A script which commands the bullets to fly straight and to destroy any enemy it comes in contact with, along with the bullet itself)
 
-V -Player (A still character, giving the semblance of running, but really not moving forward. It has the task of shooting backwards and moving sideways, to avoid incoming walls. Also the player will trigger functions whenever it comes in contact with enemies, walls or the finish line.)
+-CountDown Manager (Just launches the countdown before the game starts)
 
-V -Enemy (A basic class for all enemies, implementing classic stuff like hit points and other basic parameters, as well as the function to call for the end of the game whenever it touches the player)
+-DestroyerNet (A script to make so that bullets, walls and signals are destroyed when they get out of the camera)
 
-V -Runner (The basic kind of Enemy. It runs forward, trying to catch up with the player, then when it gets close enough it starts homing in, trying to touch the player)
+-Enemy (A basic class for all enemies, implementing classic stuff like the function called whenever the enemy touches the player)
 
-V -Signal (A basic road signal, telling the player how far he's gotten. This just spawns at the side of the road every x time units, to let you know how much you've been running and how much distance you're missing until the end of the road)
+-EnemyCollision (A small script, telling the enemies' not to push around both the player and the walls)(Honestly this ended up not being useful at all, but I decided to leave it in the game, maybe one day we can repurpose it)
 
-V -Interactable (A father for all classes which will have to interact with the player on hit. Children of this class will implement a call whenever the collider attached to the class touches the player. A child of this class is, for example, the wall object)
+-Enemy Spawn (An object managing the spawn of new enemies on the track. The frequency of new enemies can be modified by the Game Designer. The enemies always get spawned at the end of the track, and multiple can be spawned at the same time, to give of the idea of a crowd following the player)
 
-V -Wall (A block spawning on the road as you go on, if the player touches it, it breaks, while debuffing the player with a lower running speed. This really just makes it so that enemies catch up faster and road signals spawn less frequently. The slow effect lasts x seconds, as decided by the Game Designer)
+-Finish Line (An object that spawns at the end of the road. If the player touches it and is still alive, then the game ends and you've won)
 
-V -Wall Spawn (An object tasked with spawning the walls in established patterns, choosing patterns based on a randomly generated number)
+-Hitbox (A simple script, which tells all weapons used by the player to do something to the enemy whenever one is hit by them)
 
-V -Enemy Spawn (An object managing the spawn of new enemies on the track. The frequency of new enemies can be modified by the Game Designer. The enemies always get spawned at the end of the track, running at varying speed starting from a base value, adding or subtracting a small standard value, which is in range of a percentage of the base speed)
-
-V -Finish Line (An object that spawns at the end of the road. If the player touches it and is still alive, then the game ends and you've won)
-
-V -Waypoint Spawner (An object that spawns waypoints on the road, like signals and the finish line)
-
-V -Pause Manager (The last manager, which controls the pause function in the game, and is tied to the same object as the main menu. This allows the game to be paused while running)
-
-V -CountDown Manager (Just launches the countdown before the game starts)
-
-V -Parameter Loader (A Manager containing the parameters written in by the Game Designer. This class loads parameters from a txt file, and normalizes them if needed, so that if an input error is made by a Designer, the game doesn't break up at least)
-
-V -EnemyCollision (A small script, telling the enemies' not to push around both the player and the walls)
-
-V -Bullet (A script which commands the bullets to fly straight and to call a base function when coming in contact with enemies)
-
-V -Hitbox (A simple script, which tells all weapons used by the player to do something to the enemy whenever one is hit by them)
-
-V -DestroyerNet (A script to make so that bullets and walls are destroyed when they get out of the camera)
+-Interactable (A father for all classes which will have to interact with the player on hit. Children of this class implement a call whenever the collider attached to the class touches the player. A child of this class is, for example, the wall object)
 
 -KillCounter (A script to keep track of how many enemies have been killed. If the number meets the requirement, then you win the game)
 
--
+-MainMenu (GUI Element, it's a still image, containing the basic informations to play the game and the start button. It sends reset messages to all the other elements in the game whenever a new game is started)
+
+-Parameter Loader (A Manager containing the parameters written in by the Game Designer. It's a static class, easy to modify and access from other classes)
+
+-Pause Manager (Another manager, which controls the pause function in the game. This allows the game to be paused while running)
+
+-Player (A still character, giving the semblance of running, but really not moving forward. It has the task of shooting backwards and moving sideways, to avoid incoming walls. Also the player will trigger functions whenever it comes in contact with enemies, walls or the finish line. This is obviously the character controlled by the player)
+
+-RelativeSpeed (A father class for all objects that need to lower their speed whenever the player is hit by a slowing effect)(Like bullets, walls, signals and generally all other interactables etc.)
+
+-Runner (The basic kind of Enemy. It runs forward, trying to catch up with the player, then when it gets close enough it starts homing in, trying to touch the player)
+
+-Signal (A basic road signal, telling the player how far ahead he still has to go to reach the end. This just spawns at the side of the road every x time units, to let you know how much distance you're missing until the end of the road)
+
+-Wall (A block spawning on the road as you go on, if the player touches it, it breaks, while debuffing the player with a lower running speed. This really just makes it so that enemies catch up faster and road signals spawn less frequently. The slow effect lasts x seconds, as decided by the Game Designer)
+
+-Wall Spawn (An object tasked with spawning the walls in established patterns, choosing patterns based on a randomly generated number)
+
+-Waypoint Spawner (An object that spawns waypoints on the road, like signals and the finish line)

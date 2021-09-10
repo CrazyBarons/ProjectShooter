@@ -15,13 +15,11 @@ public class script_WallSpawn : MonoBehaviour
     bool canSpawn = false;
     bool isWaiting = false;
 
-    // Start is called before the first frame update
     void Start()
     {
         baseFrequency = script_ParameterLoader.get_wallsFrequency();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!isWaiting)
